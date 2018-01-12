@@ -1,0 +1,442 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+body {
+     margin: 0px;
+    padding: 0px;  
+    font-family:  Arsenal;
+    font-weight: 500;
+    background-color: white;
+}
+
+/*background-color: #FBF5EF;*/
+
+/*************************************** Full Grid *****************************************/
+
+#site {
+   display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    grid-template-areas:
+        ". . header header header header . ."
+        ". slider slider slider slider slider  slider  ."
+        ". siteCaption  siteCaption siteCaption siteCaption siteCaption siteCaption  ."
+        ". bio bio bio bio bio map ."
+        ". bio bio bio bio bio map ."
+        ". bio bio bio bio bio map ."
+       
+        ". houseList houseList houseList houseList houseList houseList ."
+        ". gallery gallery gallery gallery gallery gallery ."
+        ". architecture architecture architecture architecture architecture architecture .";
+/*        "footer footer footer footer  footer footer footer";*/
+    grid-area: inherit;
+    grid-gap: 0px;
+    
+}
+
+
+
+
+
+
+
+/************************************* GENERAL CSS *****************************************/
+
+p {
+    padding: 10px;
+}
+
+h1 {
+/*    font-family: 'Parisienne', cursive;*/
+    font-family: 'Clicker Script', cursive;
+    font-size: 35px;
+    font-weight: 1;
+}
+
+
+h2 {
+/*    padding-top: 10px;*/
+    font-family: 'Arsenal', sans-serif;
+    text-align: center;
+}
+
+.responsive { 
+    height: auto;
+    max-width: 100%;   
+} 
+
+
+/*************************************** Header *****************************************/
+
+header {
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: header;
+    height: 60px; 
+    text-align: center;
+}
+
+header img {
+    max-height: 40px;
+}
+
+
+
+/*************************************** Slider *****************************************/
+
+#slider {
+    grid-area: slider;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+/*    width: 100%; */
+/*    justify-content: space-around;*/
+    
+}
+
+
+
+#slider img {
+    
+/*
+    border-style: double;
+    
+    border-width: thin;
+*/
+    border-radius: 15px;
+      border-bottom-left-radius: 0px;
+    border-bottom-right-radius:  0px;
+}
+
+
+
+
+/*************************************** Site Caption  *****************************************/
+
+#siteCaption {
+    grid-area: siteCaption;
+    background-color: #f1f1f1;
+/*    z-index: -1;*/
+    margin: -10px 0px 10px 0px;
+    padding-top: 12px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+/*
+    border-style: solid;
+    border-bottom-width: thin;
+*/
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+#bio {
+        grid-area: bio; 
+        margin-top: 20px;
+        margin-bottom: 20px;
+/*        background-color: snow;*/
+        border-radius: 20px;
+    
+}
+
+#bio h2 {
+    font-family: 'Clicker Script';
+}
+
+
+#map {
+    grid-area: map;
+    padding:30px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+
+
+
+
+#houseList{
+    grid-area: houseList;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+/*    font-family: cursive;*/
+    font-size: 20px; 
+    align-items: center;
+/*    background-color: snow;*/
+    border-radius: 20px;
+/*     background-image: url("cottageMedia/HudsonCottageWebPhotos/13.jpg");*/
+   
+}
+
+#houseList img{
+    max-height: 450px;
+    border-radius: 10px; 
+    margin: 10px;
+    margin-right: 30px
+}
+
+#houseList ul{
+    margin: 20px;
+    margin-left: 40px;
+    width: 300px
+}
+
+/*************************************** Gallery  *****************************************/
+#gallery {
+    grid-area: gallery;
+    margin:0px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1480px;
+    margin-bottom: 30px;
+     background-color: #f1f1f1;
+    
+    padding-top: 20px;
+    border-radius: 20px;
+}
+
+
+
+
+#gallery img {
+    max-height: 170px;
+    border-radius: 5px;
+    margin: 0px 1px -3px 0px;
+/*
+     border-style: solid;
+    border-color: lightgray;
+*/
+}
+
+
+
+
+
+
+#architecture {
+    margin-top: 20px;
+    
+    grid-area: architecture;
+    text-align: center;
+    width: 100%;
+   
+}
+
+#architecture h2 {
+    padding-top: 10px;
+    font-family: 'Clicker Script', cursive;
+    font-size: 40px;
+}
+
+
+#mockUps {
+/*
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+*/
+
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+
+#mockUps img {
+    padding:10px;
+}
+/* 
+
+
+
+****************************************************************************************** MEDIAQUERY ******************************************************************************************
+
+
+
+
+*/
+
+@media screen and (max-width: 1000px) {
+/*    736*/
+    #site {
+   display: grid;
+    grid-template-columns: 1fr ;
+    
+    grid-template-areas:
+        "header  "
+        "slider  "
+        "siteCaption "
+        " bio "
+        "map "
+        "houseList"
+        "gallery"
+        "architecture"
+        ;
+        "footer"
+    grid-area: inherit;
+    
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+
+    #slider img {
+        border-radius: 0px;
+
+    }
+
+    #siteCaption {
+/*       border-radius: 0px; */
+
+    }
+
+    #map iframe {
+        width: 100%;
+        padding: 0px;
+    }
+    
+/*
+    #houseList {
+        margin: 20px;
+    }
+*/
+    
+    #houseList img{
+    max-height: 400px;
+    border-radius: 10px; 
+    margin: 10px;
+    
+}
+
+#houseList ul{
+    margin: 10px;
+    font-size: 14px;
+    width: 250px
+}
+    
+} /*end of small screen */
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1500px) {
+/*    736*/
+#site {
+   display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    grid-template-areas:
+        " . . . header header header header . . ."
+        ". . slider slider slider slider slider  slider  . ."
+        ". . siteCaption siteCaption siteCaption siteCaption siteCaption siteCaption . ."
+        ". . bio bio bio bio map map . ."
+       
+        ". . houseList houseList houseList houseList houseList houseList . ."
+        ". . gallery gallery gallery gallery gallery gallery . ."
+        ". . architecture architecture architecture architecture architecture architecture . .";
+        ". . footer footer footer footer  footer footer . ."
+    grid-area: inherit;
+    grid-gap: 0px;
+    
+}
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*slider info
+.slider {
+    display: flex;
+    width:100%;
+    justify-content: center;
+}
+
+#lightslider {
+   display: flex;
+    justify-content: space-around;
+}
+
+.slider ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+}
+.slider li {
+/*
+    display: block;
+    float: left;
+
+    margin-right: 6px;
+    cursor:pointer;
+}
+.slider img {
+/*    display: block;
+    height: auto;
+     align-self: center;
+   width: 50%;
+    opacity: 1;
+}
+
+img {
+/*    max-width: 10%;
+}
+
+/*.lSPager {max-height: 20px; max-width: 10px; display: flex;}*/
