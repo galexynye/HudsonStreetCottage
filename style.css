@@ -28,11 +28,12 @@ body {
         ". bio bio bio bio bio map ."
         ". bio bio bio bio bio map ."
         ". bio bio bio bio bio map ."
-       
+        
         ". houseList houseList houseList houseList houseList houseList ."
+        ". videoSection videoSection videoSection videoSection videoSection videoSection ."
         ". gallery gallery gallery gallery gallery gallery ."
-        ". architecture architecture architecture architecture architecture architecture .";
-/*        "footer footer footer footer  footer footer footer";*/
+        ". architecture architecture architecture architecture architecture architecture ."
+        ". footer footer footer footer  footer footer .";
     grid-area: inherit;
     grid-gap: 0px;
     
@@ -69,6 +70,10 @@ h2 {
     max-width: 100%;   
 } 
 
+a {
+    color:green;
+    text-decoration: none;
+}
 
 /*************************************** Header *****************************************/
 
@@ -184,6 +189,7 @@ header img {
 /*    background-color: snow;*/
     border-radius: 20px;
 /*     background-image: url("cottageMedia/HudsonCottageWebPhotos/13.jpg");*/
+    background-color: #f1f1f1; 
    
 }
 
@@ -199,6 +205,25 @@ header img {
     margin-left: 40px;
     width: 300px
 }
+
+
+
+
+/*************************************** VideoSection  *****************************************/
+
+
+#videoSection {
+    grid-area: videoSection; 
+    display: flex;
+    max-width: 100%; 
+    justify-content: center;
+}
+
+#videoSection div iframe {
+    max-width: 100%;
+    padding: 10px;
+}
+
 
 /*************************************** Gallery  *****************************************/
 #gallery {
@@ -264,6 +289,37 @@ header img {
 #mockUps img {
     padding:10px;
 }
+
+
+/*************************************** Foooter *****************************************/
+
+#footer {
+    grid-area: footer;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 30px;
+    border-style:ridge;
+    border-radius: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer h2 {
+    
+    font-size: 40px;
+    font-family: 'Clicker Script', cursive;
+}
+
+
+
+
+
+
+
+
+
 /* 
 
 
@@ -288,10 +344,11 @@ header img {
         " bio "
         "map "
         "houseList"
+        "videoSection"
         "gallery"
         "architecture"
-        ;
-        "footer"
+        
+        "footer";
     grid-area: inherit;
     
     }
@@ -325,14 +382,21 @@ header img {
     max-height: 400px;
     border-radius: 10px; 
     margin: 10px;
+    background-color: #f1f1f1; 
     
 }
 
 #houseList ul{
     margin: 10px;
     font-size: 14px;
-    width: 250px
+    width: 250px;
+    background-color: #f1f1f1; 
 }
+    
+    #videoSection div iframe {
+        height: 315px; 
+    
+    }
     
 } /*end of small screen */
 
@@ -360,9 +424,10 @@ header img {
         ". . bio bio bio bio map map . ."
        
         ". . houseList houseList houseList houseList houseList houseList . ."
+        ". . videoSection videoSection videoSection videoSection videoSection videoSection . ."
         ". . gallery gallery gallery gallery gallery gallery . ."
-        ". . architecture architecture architecture architecture architecture architecture . .";
-        ". . footer footer footer footer  footer footer . ."
+        ". . architecture architecture architecture architecture architecture architecture . ."
+        ". . footer footer footer footer  footer footer . .";
     grid-area: inherit;
     grid-gap: 0px;
     
