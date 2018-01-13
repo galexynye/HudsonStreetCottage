@@ -217,6 +217,7 @@ header img {
     display: flex;
     max-width: 100%; 
     justify-content: center;
+    margin: 10px;
 }
 
 #videoSection div iframe {
@@ -299,8 +300,9 @@ header img {
     padding-left: 50px;
     padding-right: 50px;
     margin-bottom: 30px;
-    border-style:ridge;
-    border-radius: 20px;
+/*    border-style:solid;*/
+    border-width: thin;
+    border-radius: 10px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -393,9 +395,14 @@ header img {
     background-color: #f1f1f1; 
 }
     
-    #videoSection div iframe {
+#videoSection div iframe {
         height: 315px; 
+        max-width: 100%;
+        padding: 0px;
+    }
     
+#footer {
+    border-radius: 0px; 
     }
     
 } /*end of small screen */
