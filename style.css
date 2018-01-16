@@ -146,7 +146,8 @@ header img {
 
 
 
-
+/*************************************** 
+Bio  *****************************************/
 
 
 
@@ -165,6 +166,11 @@ header img {
 }
 
 
+ a {
+    color: #5f7ec1;
+}
+
+
 #map {
     grid-area: map;
     padding:30px;
@@ -173,8 +179,15 @@ header img {
    justify-content: center;
 }
 
+.fa {
+    color: #5f7ec1;
+}
 
 
+
+
+/*************************************** 
+List  *****************************************/
 
 #houseList{
     grid-area: houseList;
